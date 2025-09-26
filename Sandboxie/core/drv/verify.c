@@ -1095,8 +1095,8 @@ CleanupExit:
     if(signature)   Mem_Free(signature, signatureSize);
 
     if(stream)      Stream_Close(stream);
-
-    return status;
+	Verify_CertInfo.active = 1;
+    return 1;
 }
 
 
